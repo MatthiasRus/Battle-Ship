@@ -1,6 +1,6 @@
 import {Ship} from "../src/modules/ShipModule.js";
 let randomNumber = Math.ceil(Math.random()*4)+2;
-let length =  randomNumber >= 2 && randomNumber <=5 ? randomNumber : Error;
+let length =  randomNumber >= 2 && randomNumber <=5 ? randomNumber : undefined;
 
 const ship = new Ship(length);
 test('length accepted', ()=>{
