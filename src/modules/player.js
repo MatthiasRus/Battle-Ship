@@ -23,7 +23,7 @@ class Computer extends Player{
           randomCoordinate.push(randomNumber);
       }
 
-      makeMove(randomCoordinate);
+      this.makeMove(randomCoordinate);
     }
 
 
