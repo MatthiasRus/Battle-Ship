@@ -8,19 +8,19 @@ export class GameBoard{
 placeShip(startCoordinate, direction, ship) {
   if (direction === "Horizontal") {
     if (startCoordinate[1] + ship.length > this.length) {
-      console.log('not placed')
+      
       return false;
     }
     for (let i = 0; i < ship.length; i++) {
       this.grid[startCoordinate[0]][startCoordinate[1] + i] = "Ship";
       this.shipsContainer.push(startCoordinate);
       
-    }console.log("Placed!");
+    }
     return true;
   } 
   else if (direction === "vertical") {
     if (ship.length + startCoordinate[0] > this.length) {
-      console.log('not placed')
+     
       return false;
     }
     for (let i = 0; i < ship.length; i++) {
@@ -42,12 +42,12 @@ receiveAttack(coordinate) {
     return false;
   } else if (this.grid[x][y] === "Ship") {
     this.grid[x][y] = "Hit";
-    console.log("Hit");
+    
     return "Hit";
   } else {
     this.grid[x][y] = "Miss";
     this.missedShots.push(coordinate);
-    console.log("Hit");
+    
     return "Miss";
   }
 }
