@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship Game</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      grid-template-rows: repeat(10, 40px);
+      gap: 2px;
+    }
+
+    .cell {
+      width: 40px;
+      height: 40px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .hit {
+      background-color: red;
+    }
+
+    .miss {
+      background-color: gray;
+    }
+
+    .ship {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Battleship Game</h1>
+  <div id="gameBoard" class="grid"></div>
+
+  <button id="randomMove">Make Random Computer Move</button>
+  
+  <script type="module" src="./modules/game.js"></script>
+</body>
+</html>
